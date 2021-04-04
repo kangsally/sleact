@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "sourceMap": true,
-    "lib": ["ES2020", "DOM"],
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "Node",
-    "target": "es5",
-    "strict": true,
-    "resolveJsonModule": true,
+    "sourceMap": true, // error 난 위치 찾기 쉬움
+    "lib": ["ES2020", "DOM"], // front 개발 할 때 이렇게 설정하면 됨
+    "jsx": "react", // jsx 가 react 용이다라고 알려줌
+    "module": "esnext", // 최신 모듈을 쓰겠다 conmmonJS, AMD, SystemJS 등등.. (import, export..)
+    "moduleResolution": "Node", // 다만 import, export도 node가 해석하게 하겠다.
+    "target": "es5", // es5로 변환하겠다
+    "strict": true, // 타입 엄격하게 검사하겠다
+    "resolveJsonModule": true, // import json 파일하는거 허락하겠다
     "baseUrl": ".",
-    "paths": {
+    "paths": { // 절대 경로 설정해줌
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
       "@layouts/*": ["layouts/*"],
@@ -20,3 +20,6 @@
     }
   }
 }
+
+// 타입스크립트가 바꿔주겠다는대로 한번에 바꾸는 방법과 / 타입스크립트로 한번 바꾸고 그 다음에 바벨로 바꾸는 것이 있음
+// 이미지나 CSS를 babel이 자바스크립트로 바꿔주기 때문에 두번째 방법을 많이 사용함

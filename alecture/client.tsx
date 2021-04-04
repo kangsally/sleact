@@ -13,3 +13,5 @@ render(
 // pages - 서비스 페이지
 // components - 짜잘 컴포넌트
 // layouts - 공통 레이아웃
+
+// tsconfig-for-webpack-config.json -> webpack.config.ts를 인식하기 위해 필요

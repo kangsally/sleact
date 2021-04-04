@@ -15,7 +15,7 @@ import useSWR, { useSWRInfinite } from 'swr';
 
 const Channel = () => {
   const { workspace, channel } = useParams<{ workspace: string; channel: string }>();
-  const { data: myData } = useSWR('/api/users', fetcher);
+  const { data: myData } = useSWR('/api/users', fetcher); // swr 은 전역 스토리지가 된다.
   const [chat, onChangeChat, setChat] = useInput('');
   const { data: channelData } = useSWR<IChannel>(`/api/workspaces/${workspace}/channels/${channel}`, fetcher);
   const { data: chatData, mutate: mutateChat, revalidate, setSize } = useSWRInfinite<IChat[]>(

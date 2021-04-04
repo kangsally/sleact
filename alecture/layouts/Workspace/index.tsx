@@ -27,7 +27,7 @@ import { Button, Input, Label } from '@pages/SignUp/styles';
 import { IChannel, IUser } from '@typings/db';
 import fetcher from '@utils/fetcher';
 import axios from 'axios';
-import React, { VFC, useCallback, useState, useEffect } from 'react';
+import React, { VFC, useCallback, useState, useEffect } from 'react'; // VFC 는 children이 없는 컴포넌트, FC는 있는 컴포넌트
 import { Redirect, useParams } from 'react-router';
 import { Link, Route, Switch } from 'react-router-dom';
 import useSWR from 'swr';

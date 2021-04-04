@@ -11,8 +11,8 @@ const SignUp = () => {
 
   const [email, onChangeEmail] = useInput('');
   const [nickname, onChangeNickname] = useInput('');
-  const [password, , setPassword] = useInput('');
-  const [passwordCheck, , setPasswordCheck] = useInput('');
+  const [password, , setPassword] = useInput(''); // 가운데를 빈값으로 둠
+  const [passwordCheck, , setPasswordCheck] = useInput(''); // 가운데를 빈값으로 둠
   const [mismatchError, setMismatchError] = useState(false);
   const [signUpError, setSignUpError] = useState('');
   const [signUpSuccess, setSignUpSuccess] = useState(false);
@@ -38,8 +38,8 @@ const SignUp = () => {
       e.preventDefault();
       if (!mismatchError && nickname) {
         console.log('서버로 회원가입하기');
-        setSignUpError('');
-        setSignUpSuccess(false);
+        setSignUpError(''); // 이런건 항상 초기화 해주는 것이 좋음
+        setSignUpSuccess(false); // 이런건 항상 초기화 해주는 것이 좋음
         axios
           .post('/api/users', {
             email,
